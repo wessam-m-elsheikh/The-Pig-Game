@@ -1,0 +1,53 @@
+<!-- 
+    - gradient bg
+    - 2 player boxes almost 80% width and height
+    - each player box contains:
+      * player text
+      * total score
+      * smaller box of current score 
+      * boxes bg is a lighter color when active player it's a darker shade
+    - on a different level (higher z-index) there is:
+      * new game reset btn
+      * dice image
+      * roll dice btn
+      * hold btn
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Pig Game</title>
+  </head>
+  <body>
+    <button class="reset-btn">play again</button>
+    <main class="flex-container">
+      <section class="player player1 active-player">
+        <h1>Player 1</h1>
+        <p class="total-score" id="player-1-score">0</p>
+        <img id="img-1" src="" />
+        <div class="current" id="player1-current">
+          <h3>current</h3>
+          <p>0</p>
+        </div>
+        <button id="roll-dice1">roll 🎲</button>
+        <button id="hold1">hold 🔒</button>
+      </section>
+      <section class="player player2">
+        <h1>Player 2</h1>
+        <p class="total-score" id="player-2-score">0</p>
+        <img id="img-2" src="" />
+        <div class="current" id="player2-current">
+          <h3>current</h3>
+          <p>0</p>
+        </div>
+        <button id="roll-dice2">roll 🎲</button>
+        <button id="hold2">hold 🔒</button>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
